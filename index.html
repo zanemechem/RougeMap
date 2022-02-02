@@ -43,13 +43,13 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art="false"></canvas>
-		<script src="Build/17-nogzip.loader.js"></script>
+		<script src="Build/20-polar.loader.js"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/17-nogzip.data",
-				frameworkUrl: "Build/17-nogzip.framework.js",
-				codeUrl: "Build/17-nogzip.wasm",
+				dataUrl: "Build/20-polar.data",
+				frameworkUrl: "Build/20-polar.framework.js",
+				codeUrl: "Build/20-polar.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "DefaultCompany",
 				productName: "Thesis_UnityMap-2",
@@ -75,15 +75,15 @@
 					w = window.innerWidth;
 					h = window.innerHeight;
 
-					var r = 810 / 1440;
+					var r = 1080 / 1920;
 
 					if (w * r > window.innerHeight) {
 						w = Math.min(w, Math.ceil(h / r));
 					}
 					h = Math.floor(w * r);
 				} else {
-					w = 1440;
-					h = 810;
+					w = 1920;
+					h = 1080;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
